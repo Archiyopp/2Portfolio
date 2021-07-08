@@ -32,7 +32,7 @@ function App() {
     }
   };
   return (
-    <main data-theme={theme}>
+    <main data-theme={theme} className="bg-base-100">
       <Router>
         <AccessibleNavigationAnnouncer />
         <Navbar setTheme={setTheme} toggleTheme={toggleTheme} />

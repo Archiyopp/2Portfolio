@@ -11,6 +11,7 @@ export default function NavThemes({ setTheme }: TProps) {
           <button
             className="btn btn-circle btn-ghost h-6 w-6 lg:mr-1 lg:h-10 lg:w-10 text-lg lg:text-2xl xl:text-3xl text-primary transition-colors duration-300 hover:text-primary-focus focus:text-primary-focus"
             onClick={() => setTheme(themeBtn.theme)}
+            aria-label={`${themeBtn.theme} theme`}
           >
             {themeBtn.icon}
           </button>
