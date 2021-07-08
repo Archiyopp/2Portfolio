@@ -13,7 +13,7 @@ export default function Navbar({ setTheme, toggleTheme }: NavProps) {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
-    <header className="shadow-2xl bg-base-200">
+    <header className="shadow-xl bg-base-200">
       <nav className="max-w-screen-xl mx-auto my-auto p-2 sm:flex sm:items-center sm:justify-between">
         <NavHeader
           toggleTheme={toggleTheme}

@@ -3,9 +3,9 @@ import Technologies from './technologies';
 
 export default function HomePage() {
   return (
-    <div>
+    <>
       <Hero />
       <Technologies />
-    </div>
+    </>
   );
 }

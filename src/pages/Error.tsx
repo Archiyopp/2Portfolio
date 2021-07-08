@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 export default function Error() {
   const { pathname } = useLocation();
+  useEffect(() => {
+    document.title = 'Error | Cristian Fernandez';
+  }, []);
   return (
     <>
       <p className="text-4xl text-center my-6 mx-auto font-semibold">

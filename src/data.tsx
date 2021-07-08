@@ -29,6 +29,7 @@ interface socialLink {
 interface ability {
   skill: string;
   icon: any;
+  text: string;
 }
 interface ThemeBtn {
   theme: string;
@@ -97,22 +98,27 @@ export const abilities: abilitiesType = [
   {
     skill: 'HTML',
     icon: <IoLogoHtml5 aria-label="logo" />,
+    text: 'Strong knowledge of HTML5, accessibility, and semantics.',
   },
   {
     skill: 'CSS',
     icon: <IoLogoCss3 aria-label="logo" />,
+    text: 'Good knowledge of layouts, positioning, styling and some cool tricks.',
   },
   {
     skill: 'Javascript',
     icon: <IoLogoJavascript aria-label="logo" />,
+    text: 'Knowledgeable about Javascript fundamentals, asynchronous concepts, and use of APIs.',
   },
   {
     skill: 'Python',
     icon: <IoLogoPython aria-label="logo" />,
+    text: 'Strong fundamentals, some knowledge about data analisis using pandas and numpy libraries.',
   },
   {
     skill: 'React',
     icon: <IoLogoReact aria-label="logo" />,
+    text: 'Very knowledgeable about react hooks, jsx, data fetching and use of some react libraries.',
   },
 ];
 
