@@ -9,41 +9,61 @@ import Title from '../../../components/utilities/title';
 import useTitle from '../../../hooks/useTitle';
 import NumberBtn from './number';
 export default function Calculator() {
-  const [value, setValue] = useState('0');
+  const [value, setValue] = useState('');
   const [previous, setPrevious] = useState('0');
   useTitle('Calculator');
-  const handleResult = () => {
+  const handleResult = (equal = '') => {
     switch (value[0]) {
       case '+': {
-        const result = Number(previous) + Number(value.slice(2));
-        return setValue(result.toString());
+        const result = Number(previous) + Number(value.slice(1));
+        setValue(result.toString());
+        if (!equal) {
+          setPrevious(result.toString());
+        }
+        break;
       }
       case 'x': {
-        const result = Number(previous) * Number(value.slice(2));
-        return setValue(result.toString());
+        const result = Number(previous) * Number(value.slice(1));
+        setValue(result.toString());
+        if (!equal) {
+          setPrevious(result.toString());
+        }
+        break;
       }
       case '-': {
         const result = Number(previous) - Number(value.slice(1));
-        return setValue(result.toString());
+        setValue(result.toString());
+        if (!equal) {
+          setPrevious(result.toString());
+        }
+        break;
       }
       case '/': {
-        const result = Number(previous) / Number(value.slice(2));
-        return setValue(result.toString());
+        const result = Number(previous) / Number(value.slice(1));
+        setValue(result.toString());
+        if (!equal) {
+          setPrevious(result.toString());
+        }
+        break;
       }
       default:
+        setPrevious(value);
         break;
     }
-
-    setPrevious('');
   };
+  console.log('p', previous, 'v', value);
   const handleDelete = () => {
     setValue((value) => {
       if (value?.length > 1) {
         return value.slice(0, -1);
       } else {
-        return '0';
+        return '';
       }
     });
+  };
+  type operator = 'x' | '-' | '+' | '/';
+  const handleOperation = (operator: operator) => {
+    setValue(operator);
   };
   return (
     <section className="flex flex-col items-center mx-auto px-2 my-2 max-w-7xl text-base-content min-h-screen">
@@ -60,9 +80,6 @@ export default function Calculator() {
             if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
               setValue(previous);
               setPrevious(value);
-            }
-            if (e.key === 'Backspace') {
-              handleDelete();
             }
           }}
         />
@@ -103,8 +120,8 @@ export default function Calculator() {
         <button
           className="btn text-3xl btn-primary"
           onClick={() => {
-            setPrevious(value);
-            setValue('-');
+            handleResult();
+            handleOperation('-');
           }}
         >
           <CgMathMinus />
@@ -117,8 +134,8 @@ export default function Calculator() {
         <button
           className="btn btn-primary text-3xl"
           onClick={() => {
-            setPrevious(value);
-            setValue('+ ');
+            handleResult();
+            handleOperation('+');
           }}
         >
           <CgMathPlus />
@@ -131,8 +148,8 @@ export default function Calculator() {
         <button
           className="btn btn-primary text-3xl"
           onClick={() => {
-            setPrevious(value);
-            setValue('/ ');
+            handleResult();
+            handleOperation('/');
           }}
         >
           <CgMathDivide />
@@ -142,15 +159,15 @@ export default function Calculator() {
         </NumberBtn>
         <button
           className="btn btn-primary text-5xl col-span-2 p-0"
-          onClick={handleResult}
+          onClick={() => handleResult('=')}
         >
           <CgMathEqual />
         </button>
         <button
           className="btn btn-primary text-3xl"
           onClick={() => {
-            setPrevious(value);
-            setValue('x ');
+            handleResult();
+            handleOperation('x');
           }}
         >
           <CgMathPlus className="transform rotate-45" />
