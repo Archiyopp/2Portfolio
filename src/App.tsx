@@ -10,6 +10,7 @@ const About = lazy(() => import('./pages/about'));
 const Contacts = lazy(() => import('./pages/contacts'));
 const Projects = lazy(() => import('./pages/projects'));
 const Error = lazy(() => import('./pages/Error'));
+const Calculator = lazy(() => import('./pages/projects/calculator'));
 
 const getTheme = (): string => {
   let theme = 'emerald';
@@ -47,8 +48,11 @@ function App() {
             <Route path={PATHS.Contact}>
               <Contacts />
             </Route>
-            <Route path={PATHS.Projects}>
+            <Route exact path={PATHS.Projects}>
               <Projects />
+            </Route>
+            <Route path={PATHS.Calculator}>
+              <Calculator />
             </Route>
             <Route path={PATHS.Error}>
               <Error />

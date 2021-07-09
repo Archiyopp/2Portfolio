@@ -8,7 +8,7 @@ export default function SocialNav() {
           <a
             href={socialLink.url}
             aria-label={socialLink.label}
-            className="btn btn-circle btn-ghost h-6 w-6 lg:h-10 lg:w-10 text-base lg:text-xl xl:text-2xl text-secondary transition-colors duration-300 hover:text-secondary-focus focus:text-secondary-focus"
+            className="btn btn-circle bg-transparent border-none hover:bg-transparent h-6 w-6 lg:h-10 lg:w-10 text-base lg:text-xl xl:text-2xl text-secondary transition-colors duration-300 hover:text-secondary-focus focus:text-secondary-focus"
           >
             {socialLink.icon}
           </a>

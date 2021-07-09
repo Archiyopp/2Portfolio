@@ -8,7 +8,7 @@ export default function Technologies() {
       </h2>
       <ul className="grid sm:grid-cols-2 gap-4 my-2 min-w-full ">
         {abilities.map((ability) => (
-          <li>
+          <li key={ability.skill}>
             <div className="flex text-2xl sm:text-3xl">
               <div className="mr-2 mt-1 text-secondary">{ability.icon}</div>
               <h3 className="text-primary-focus font-sans font-medium ">

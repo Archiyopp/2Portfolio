@@ -1,5 +1,6 @@
 import selfiej from './../../images/selfie2j.jpg';
 import selfiew from './../../images/selfie2.webp';
+import Title from '../utilities/title';
 export default function Hero() {
   return (
     <section className="hero my-3 md:my-4 lg:my-6">
@@ -15,9 +16,7 @@ export default function Hero() {
           />
         </picture>
         <div className="text-base-content">
-          <h1 className="mb-5 text-5xl font-bold font-sans">
-            Hello there, I'm Cristian Fernandez
-          </h1>
+          <Title>Hello there, I'm Cristian Fernandez</Title>
           <p className="mb-5 text-lg md:text-xl font-sans">
             I'm a web developer and geologist from Colombia. I'm very passionate
             about developing web pages, and I'm currently improving on my

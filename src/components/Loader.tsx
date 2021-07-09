@@ -9,7 +9,9 @@ const override = css`
 
 function Loader() {
   return (
-    <PacmanLoader color="#ffe737" loading={true} css={override} size={70} />
+    <div className="min-h-full bg-base-100">
+      <PacmanLoader color="#ffe737" loading={true} css={override} size={70} />
+    </div>
   );
 }
 
