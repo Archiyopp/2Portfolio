@@ -6,9 +6,9 @@ export default function Contacts() {
     document.title = 'Contact | Cristian Fernandez';
   }, []);
   return (
-    <section className="flex flex-col items-center mx-auto px-2 my-2 max-w-7xl text-base-content min-h-screen">
-      <h1 className="mb-5 text-5xl font-bold my-6 tracking-wide">Contact</h1>
-      <p className="mb-5 text-lg md:text-xl tracking-wider">
+    <section className="flex flex-col items-center mx-auto px-2 my-2 max-w-7xl text-base-content min-h-screen font-sans">
+      <h1 className="mb-5 text-5xl font-bold my-6 font-sans">Contact</h1>
+      <p className="mb-5 text-lg md:text-xl font-sans">
         I'm seeking job opportunities as a geologist or as a web developer,
         hopefully one where I can integrate both areas, feel free to reach out
         to me with my email (crafernandezbe@unal.edu.co) or through one of the

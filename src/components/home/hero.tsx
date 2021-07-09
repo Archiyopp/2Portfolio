@@ -15,7 +15,7 @@ export default function Hero() {
           />
         </picture>
         <div className="text-base-content">
-          <h1 className="mb-5 text-5xl font-bold">
+          <h1 className="mb-5 text-5xl font-bold font-sans">
             Hello there, I'm Cristian Fernandez
           </h1>
           <p className="mb-5 text-lg md:text-xl font-sans">
