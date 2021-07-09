@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 export default function Error() {
   const { pathname } = useLocation();
-  useEffect(() => {
-    document.title = 'Error | Cristian Fernandez';
-  }, []);
+  useTitle('Not Found');
   return (
     <>
       <p className="text-4xl text-center my-6 mx-auto font-semibold">

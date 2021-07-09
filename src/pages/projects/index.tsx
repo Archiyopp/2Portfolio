@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Title from '../../components/utilities/title';
 import InstagramJ from '../../images/instagramlogin.jpg';
 import InstagramW from '../../images/instagramlogin.webp';
@@ -6,16 +5,15 @@ import Project from './project';
 import { Calculator } from '../../constants/paths';
 import CalculatorJ from '../../images/calculatorj.jpg';
 import CalculatorW from '../../images/calculatorw.webp';
+import useTitle from '../../hooks/useTitle';
 
 export default function Projects() {
-  useEffect(() => {
-    document.title = 'Home | Cristian Fernandez';
-  }, []);
+  useTitle('Projects');
   return (
     <section className="flex flex-col items-center mx-auto px-2 my-2 max-w-7xl text-base-content min-h-screen">
       <Title>Projects</Title>
       <p className="mb-4 text-lg md:text-xl font-sans">
-        Check out some of my projects
+        Check out some of my projects:
       </p>
       <div className="grid sm:grid-cols-2 gap-4">
         <article className="flex flex-col items-center bg-secondary p-4 shadow-inner rounded-xl ">

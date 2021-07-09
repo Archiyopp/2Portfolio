@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import Title from '../components/utilities/title';
+import useTitle from '../hooks/useTitle';
 
 export default function About() {
-  useEffect(() => {
-    document.title = 'About | Cristian Fernandez';
-  }, []);
+  useTitle('About');
   return (
     <section className="flex flex-col items-center mx-auto px-2 my-2 max-w-7xl text-base-content min-h-screen">
       <Title>About me</Title>

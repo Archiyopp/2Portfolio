@@ -20,10 +20,15 @@ export default function NavHeader({
         to={PATHS.Home}
         className="bg-primary rounded-full transition-colors duration-300 hover:bg-primary-focus focus:bg-primary-focus"
       >
-        <img src={Logo} alt="" className="p-2 h-12 sm:h-14 md:h-16" />
+        <img
+          src={Logo}
+          alt="Cristian Fernandez Homepage"
+          className="p-2 h-14 md:h-16"
+        />
       </Link>
       <div className="flex flex-row sm:hidden">
         <label className="cursor-pointer label">
+          <span className=" label-text mr-1 font-medium font-sans">Theme:</span>
           <input className="toggle" type="checkbox" onClick={toggleTheme} />
           <span className="toggle-mark bg-primary bg-opacity-60"></span>
         </label>
