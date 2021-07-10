@@ -100,8 +100,8 @@ export default function Calculator() {
         <button
           className="btn btn-primary text-3xl"
           onClick={() => {
-            setPrevious(value);
-            setValue('x ');
+            const newValue = -Number(value);
+            setValue(newValue.toString());
           }}
         >
           +/-

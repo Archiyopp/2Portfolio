@@ -44,7 +44,7 @@ export default function Projects() {
           </div>
         </article>
         <Project
-          text="Basic calculator done with basic react"
+          text="Basic calculator done with react"
           url={Calculator}
           imgUrl={CalculatorJ}
           title="Calculator"

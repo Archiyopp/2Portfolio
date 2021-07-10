@@ -1,14 +1,13 @@
 import { useLocation } from 'react-router-dom';
+import Title from '../components/utilities/title';
 import useTitle from '../hooks/useTitle';
 export default function Error() {
   const { pathname } = useLocation();
   useTitle('Not Found');
   return (
-    <>
-      <p className="text-4xl text-center my-6 mx-auto font-semibold">
-        Oops! There is no page here!
-      </p>
-      <p className="text-lg text-center mx-auto my-4">
+    <section className="min-h-screen">
+      <Title>Oops! There is no page here!</Title>
+      <p className="text-lg text-center mx-auto my-4 text-base-content">
         Sorry, the page {pathname} could not be found.
       </p>
       <div className="mx-auto flex justify-center">
@@ -16,6 +15,6 @@ export default function Error() {
           Go Back Home
         </button>
       </div>
-    </>
+    </section>
   );
 }

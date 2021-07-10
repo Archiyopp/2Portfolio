@@ -9,7 +9,7 @@ const override = css`
 
 function Loader() {
   return (
-    <div className="min-h-full bg-base-100">
+    <div className="min-h-screen bg-base-100">
       <PacmanLoader color="#ffe737" loading={true} css={override} size={70} />
     </div>
   );
