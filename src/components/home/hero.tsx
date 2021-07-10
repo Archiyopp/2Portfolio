@@ -18,10 +18,11 @@ export default function Hero() {
         <div className="text-base-content">
           <Title>Hello there, I'm Cristian Fernandez</Title>
           <p className="mb-5 text-lg md:text-xl font-sans">
-            I'm a web developer and geologist from Colombia. I'm very passionate
-            about developing web pages, and I'm currently improving on my
-            programming skills with the Ministry of Information Technologies of
-            Colombia so I can become a better web developer.
+            I'm a web developer and geologist from Colombia. I'm very
+            passionate about developing web pages, and I'm currently
+            improving on my programming skills with the Ministry of
+            Information Technologies of Colombia so I can become a
+            better web developer.
           </p>
         </div>
       </div>

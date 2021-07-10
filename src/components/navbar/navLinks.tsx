@@ -9,7 +9,7 @@ export default function NavLinks() {
           <li key={id}>
             <Link
               to={url}
-              className="text-base-content text-sm sm:text-base lg:text-xl block px-1 lg:px-2 py-1 capitalize tracking-wide transition-all duration-300 hover:text-primary-focus focus:text-primary-focus"
+              className="text-base-content font-sans font-normal text-sm sm:text-base lg:text-xl block px-1 lg:px-2 py-1 capitalize tracking-wide transition-all duration-300 hover:text-primary-focus focus:text-primary-focus"
               activeStyle={{ color: '#df00ff' }}
               exact
               aria-current="page"

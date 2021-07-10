@@ -71,18 +71,18 @@ export default function Contacts() {
               style={{ filter: 'opacity(0.7)' }}
               src="https://www.google.com/maps/embed/v1/place?q=bogota,+puente+aranda&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
             />
-            <div className="md:bg-gray-900 bg-transparent relative flex flex-wrap py-6 rounded shadow-md">
+            <div className="bg-gray-900 bg-opacity-30 md:bg-opacity-80 relative flex flex-wrap py-6 rounded shadow-md">
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 className="title-font font-semibold text-black md:text-white tracking-widest text-xs">
+                <h2 className="font-semibold text-black md:text-white text-sm">
                   EMAIL
                 </h2>
-                <p className="text-black md:text-gray-300 leading-relaxed font-medium">
+                <p className="text-black md:text-gray-300 font-medium">
                   crafernandezbe@unal.edu.co
                 </p>
-                <h2 className="title-font font-semibold text-black md:text-white tracking-widest text-xs mt-4">
+                <h2 className="font-semibold text-black md:text-white tracking-wide text-sm mt-4">
                   PHONE
                 </h2>
-                <p className="leading-relaxed text-black md:text-white font-medium">
+                <p className="text-black md:text-gray-300 font-medium">
                   +57 3178740165
                 </p>
               </div>
@@ -103,7 +103,7 @@ export default function Contacts() {
             <div className="relative mb-4">
               <label
                 htmlFor="name"
-                className="leading-7 text-md text-base-content"
+                className="leading-7 text-md text-base-content font-sans"
               >
                 Name
               </label>
@@ -126,7 +126,7 @@ export default function Contacts() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-base-content rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-base-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-base-content tracking-wide rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-base-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -140,7 +140,7 @@ export default function Contacts() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full bg-base-content rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-base-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className="w-full bg-base-content rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-base-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out tracking-wide"
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
