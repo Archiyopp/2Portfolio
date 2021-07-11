@@ -12,6 +12,7 @@ export default function Calculator() {
   const [value, setValue] = useState('');
   const [previous, setPrevious] = useState('0');
   useTitle('Calculator');
+  console.log(previous, value);
   const handleResult = (equal = '') => {
     switch (value[0]) {
       case '+': {
@@ -50,8 +51,10 @@ export default function Calculator() {
         setPrevious(value);
         break;
     }
+    if (equal) {
+      setPrevious('0');
+    }
   };
-  console.log('p', previous, 'v', value);
   const handleDelete = () => {
     setValue((value) => {
       if (value?.length > 1) {
@@ -101,7 +104,6 @@ export default function Calculator() {
           className="btn btn-primary text-3xl"
           onClick={() => {
             const newValue = -Number(value);
-            console.log(newValue);
             setPrevious('0');
             setValue(newValue.toString());
           }}
