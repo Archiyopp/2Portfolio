@@ -8,6 +8,8 @@ import AccessibleNavigationAnnouncer from './components/AccesibleNavigationAnnou
 import Loader from './components/Loader';
 import Navbar from './components/navbar';
 import * as PATHS from './constants/paths';
+import { QueryClientProvider, QueryClient } from 'react-query';
+const queryClient = new QueryClient();
 
 const Home = lazy(() => import('./pages/home'));
 const About = lazy(() => import('./pages/about'));
@@ -61,12 +63,14 @@ function App() {
             <Route path={PATHS.Calculator}>
               <Calculator />
             </Route>
-            <Route exact path={PATHS.Meals}>
-              <Meals />
-            </Route>
-            <Route path={PATHS.SingleMeal}>
-              <SingleMeal />
-            </Route>
+            <QueryClientProvider client={queryClient}>
+              <Route exact path={PATHS.Meals}>
+                <Meals />
+              </Route>
+              <Route path={PATHS.SingleMeal}>
+                <SingleMeal />
+              </Route>
+            </QueryClientProvider>
             <Route path={PATHS.Error}>
               <Error />
             </Route>

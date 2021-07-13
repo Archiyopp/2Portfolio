@@ -78,7 +78,8 @@ export default function SingleMeal() {
         <img
           src={strMealThumb}
           alt=""
-          width="400"
+          width="430"
+          height="430"
           className="col-span-2 rounded-lg"
         />
         <div className="col-span-3">

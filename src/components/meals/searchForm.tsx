@@ -1,10 +1,13 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 export default function SearchForm({ setMeals }: any) {
   const searchRef = useRef<HTMLInputElement>(null);
   const handleSubmit = (e: any) => {
     e.preventDefault();
   };
+  useEffect(() => {
+    searchRef.current?.focus();
+  }, []);
   return (
     <div className="text-base-content">
       <form onSubmit={handleSubmit}>

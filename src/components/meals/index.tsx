@@ -1,4 +1,5 @@
 import useMeals from '../../hooks/useMeals';
+import useTitle from '../../hooks/useTitle';
 import Loader from '../Loader';
 import Title from '../utilities/title';
 import MealThumb from './mealThumb';
@@ -35,6 +36,7 @@ export default function Games() {
       return <MealThumb key={idMeal} {...mealProps} />;
     });
   }
+  useTitle('Meals');
   return (
     <section className="flex flex-col items-center min-h-screen">
       <Title>Meals Database</Title>
