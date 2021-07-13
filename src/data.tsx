@@ -1,4 +1,9 @@
-import { FaFacebook, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+} from 'react-icons/fa';
 import {
   IoLogoJavascript,
   IoLogoPython,
@@ -22,24 +27,25 @@ interface pageLink {
 interface socialLink {
   id: number;
   url: string;
-  icon: any;
+  icon: JSX.Element;
   label: string;
   color: string;
 }
 interface ability {
   skill: string;
-  icon: any;
+  icon: JSX.Element;
   text: string;
 }
+type Theme = 'emerald' | 'dracula' | 'forest' | 'cupcake';
 interface ThemeBtn {
-  theme: string;
-  icon: any;
+  theme: Theme;
+  icon: JSX.Element;
 }
 
-type pageLinks = Array<pageLink>;
-type socialLinks = Array<socialLink>;
-type abilitiesType = Array<ability>;
-type ThemeButtons = Array<ThemeBtn>;
+type pageLinks = pageLink[];
+type socialLinks = socialLink[];
+type abilitiesType = ability[];
+type ThemeButtons = ThemeBtn[];
 
 export const links: pageLinks = [
   {

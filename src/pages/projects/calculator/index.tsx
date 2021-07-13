@@ -12,7 +12,6 @@ export default function Calculator() {
   const [value, setValue] = useState('');
   const [previous, setPrevious] = useState('0');
   useTitle('Calculator');
-  console.log(previous, value);
   const handleResult = (equal = '') => {
     switch (value[0]) {
       case '+': {

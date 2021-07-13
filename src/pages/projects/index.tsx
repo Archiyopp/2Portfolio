@@ -2,10 +2,12 @@ import Title from '../../components/utilities/title';
 import InstagramJ from '../../images/instagramlogin.jpg';
 import InstagramW from '../../images/instagramlogin.webp';
 import Project from './project';
-import { Calculator } from '../../constants/paths';
+import { Calculator, Meals } from '../../constants/paths';
 import CalculatorJ from '../../images/calculatorj.jpg';
 import CalculatorW from '../../images/calculatorw.webp';
 import useTitle from '../../hooks/useTitle';
+import MealsDataJ from '../../images/mealsdatabase.jpg';
+import MealsDataW from '../../images/mealsdatabase.webp';
 
 export default function Projects() {
   useTitle('Projects');
@@ -49,6 +51,13 @@ export default function Projects() {
           imgUrl={CalculatorJ}
           title="Calculator"
           imgUrlw={CalculatorW}
+        />
+        <Project
+          text="Simple meal database using react-query"
+          url={Meals}
+          imgUrl={MealsDataJ}
+          title="Meals Database"
+          imgUrlw={MealsDataW}
         />
       </div>
     </section>

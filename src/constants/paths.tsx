@@ -1,6 +1,8 @@
-export const Home: string = '/';
-export const Projects: string = '/projects';
-export const About: string = '/about';
-export const Contact: string = '/contact';
-export const Error: string = '*';
-export const Calculator: string = '/projects/calculator';
+export const Home = '/';
+export const Projects = '/projects';
+export const About = '/about';
+export const Contact = '/contact';
+export const Error = '*';
+export const Calculator = '/projects/calculator';
+export const Meals = '/projects/meals';
+export const SingleMeal = '/projects/meals/:name';

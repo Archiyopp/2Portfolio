@@ -1,5 +1,9 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 import AccessibleNavigationAnnouncer from './components/AccesibleNavigationAnnouncer';
 import Loader from './components/Loader';
 import Navbar from './components/navbar';
@@ -11,8 +15,11 @@ const Contacts = lazy(() => import('./pages/contacts'));
 const Projects = lazy(() => import('./pages/projects'));
 const Error = lazy(() => import('./pages/Error'));
 const Calculator = lazy(() => import('./pages/projects/calculator'));
-
-const getTheme = (): string => {
+const Meals = lazy(() => import('./components/meals'));
+const SingleMeal = lazy(
+  () => import('./components/meals/singleMeal')
+);
+const getTheme = () => {
   let theme = 'emerald';
   if (localStorage.getItem('theme')) {
     theme = localStorage.getItem('theme') || 'emerald';
@@ -53,6 +60,12 @@ function App() {
             </Route>
             <Route path={PATHS.Calculator}>
               <Calculator />
+            </Route>
+            <Route exact path={PATHS.Meals}>
+              <Meals />
+            </Route>
+            <Route path={PATHS.SingleMeal}>
+              <SingleMeal />
             </Route>
             <Route path={PATHS.Error}>
               <Error />
