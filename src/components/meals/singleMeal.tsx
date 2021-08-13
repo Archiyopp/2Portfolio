@@ -4,6 +4,7 @@ import Title from '../utilities/title';
 import Loader from '../Loader';
 import { Meals } from '../../constants/paths';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 interface singleMeal {
   strArea: string;
   strCategory: string;
@@ -72,7 +73,6 @@ export default function SingleMeal() {
       strIngredient8,
       strIngredient9,
     ];
-    console.log(meal);
     mealJsx = (
       <>
         <img
@@ -129,6 +129,7 @@ export default function SingleMeal() {
       </>
     );
   }
+  useTitle(`${title}`);
 
   return (
     <section className="flex flex-col items-center min-h-screen text-base-content">
